@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+<head>
+	<title>Online Camera Store</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+	<link rel="shortcut icon" href="/jadrn042/proj2/images/icon.png" />
+	<link rel="stylesheet" type="text/css" href="/jadrn042/proj3/proj3.css" />
+	<link rel="stylesheet" type="text/css" href="/jadrn042/proj3/js/jquery-ui-1.11.4.custom/jquery-ui.css" />
+    <script type="text/javascript" src="/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/shopping_cart.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/cart.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/orderform.js"></script>
+</head>
+
+<body>
+            	
+	<div id="wrapper">
+	  <div id="banner">	
+	  	<img id="logo"src="images/icon.png" />
+	  	<a href="#"><div id="shopping-cart"><span id="count">0</span>
+	  	<img id="cart" src="images/cart.png"></div></a>
+		
+		<h1 display="inline" id="bannerTitle">Camera Store</h1><br/>	
+	</div>
+	<div id = "navigation">
+     <ul>
+      <li><a href="proj3.html" >Home</a></li>
+      <li><a href = "products.html">Products</a></li>
+      <li><a href = "about.html">About Us</a></li>
+      <li><a href = "contact.html">Contact Us</a> </li>
+      <input type="text" name="search" size="20" placeholder="Enter keyword" id="search" />
+      <input type="button" value="Search" id="searchbutton" /> 
+      </ul>
+    </div>
+    <div id="content">
+	 <div id="cart-table">
+	 
+	</div>
+	<div id="orderform">
+
+    <form  name="order" method="post" action="http://jadran.sdsu.edu/jadrn042/servlet/ConfirmOrder" id="form2" >
+	<div id="hiddendiv">
+
+       <input type="hidden" name="SKUNumber" />
+       <input type="hidden" name="Quantity" />
+       <input type='hidden' name='Price' />
+       <input type="hidden" name="Title" />
+       <input type="hidden" name="Tax" />
+       <input type="hidden" name="Shipping" />
+       <input type="hidden" name="Total" />
+
+   </div>
+		<table>
+            <tr>		
+                <td><label>First Name:</label></td>
+                <td><input type="text" name="fname" id="fname" size="25"  /></td>
+                <td colspan="4"><label>Last Name:</label>
+                <input type="text" name="lname" id="lname" size="25"  /></td>                    
+            </tr>
+            <tr>
+                <td><label>Phone: </label></td>
+            	<td colspan="5"><input type="tel" name="areacode" size="3" maxlength="3" id="hareacode" />-
+		        	<input type="tel" name="prefix" size="3" maxlength="3" id="hprefix"  />-
+		        	<input type="tel" name="phone" size="4" maxlength="4" id="hphone" /></td>
+		    </tr>
+            <tr>
+		    	<td><label>Email:</label></td> 
+			    <td colspan="5"><input type="text" name="email" size="40" />
+			    </td>
+            </tr> 
+            <tr> 
+               	<td colspan='6'><h3>Shipping Address</h3></td>  
+     		</tr>
+            
+            <tr>		
+                <td><label>Address:</label></td>
+                <td colspan="5"><input type="text" name="s_address1" size="40" /></td>
+            </tr> 
+            <tr>		
+                <td><label>Address:</label></td>
+                <td colspan="5"><input type="text" name="s_address2" size="40" /></td>
+            </tr>                  
+            <tr>		
+                <td><label>City:</label></td>
+                <td colspan="5"><input type="text" name="s_city" size="15" />
+                <label class="label1">State:</label>
+                <input type="text" name="s_state" size="3" maxlength="3" />
+                <label class="labelz">Zipcode:</label>
+                <input type="text" name="s_zip" size="10" id="s_zip" maxlength="5"/></td>                                        
+            </tr> 
+         	<tr> 
+               	<td><h3>Payment Details</h3></td>  
+     		</tr>
+            <tr>	
+                <td><label class="label0">Name on Card:</label></td>
+                <td colspan="5">
+                <input type="text" name="nameonc" size="25" /></td>                    
+            </tr>
+            <tr>
+            	<td><label class="label0">Payment Type:</label></td>
+                <td colspan="5"><input type="radio" name="ptype" value="credit" checked="checked" />Credit Card
+				<input type="radio" name="ptype" value="debit"  />Debit Card</td>	
+            </tr>
+            <tr>
+            	<td><label>Card Type:</label></td>
+	            <td colspan="5"><select id="crtype" name="crtype" class="dropdown">
+	   			    <option value="cr1">American Express</option>
+	                <option value="cr2">Master</option>
+	   				<option value="cr3">Visa</option>
+	  				</select></td>
+            </tr>
+            <tr>
+            	<td><label class="label0">Card Number:</label></td>
+            	<td colspan="5"><input type="text" name="cardno" size="30" maxlength="16" />
+            	</td>
+            </tr>
+            <tr>
+            	<td><label class="label0">Valid Through:</label></td>
+            	<td colspan="3"><input type="text" name="month" size="2" maxlength="2" placeholder="mm" />/
+            	<input type="text" name="year" maxlength="4" size="4" placeholder="yyyy" /></td>
+            	<td colspan="2"><label class="label1">CVV:</label>
+            	<input type="text" name="cvv" maxlength="4" size="4" /></td>           
+            </tr>
+        	<tr> 
+               	<td><h3>Billing Address</h3></td>  
+     		</tr>
+            <tr>
+            	<td colspan="6"><input name="sameaddr" type="checkbox" value="selected"  />
+            	Check if your Billing Address is same as Shipping Address</td>
+            </tr>
+            <tr>		
+                <td><label>Address:</label></td>
+                <td colspan="5"><input type="text" name="b_address1" size="40" /></td>
+            </tr> 
+            <tr>		
+                <td><label>Address:</label></td>
+                <td colspan="5"><input type="text" name="b_address2" size="40" /></td>
+            </tr>                  
+            <tr>		
+                <td><label>City:</label></td>
+                <td colspan="5"><input type="text" name="b_city" size="15" />
+                <label class="label1">State:</label>
+                <input type="text" name="b_state" size="3" maxlength="3" />
+                <label class="labelz">Zipcode:</label>
+                <input type="text" name="b_zip" size="10" id="b_zip" maxlength="5"/></td>                                        
+            </tr>    
+         	
+        </table>
+		
+        <div id="message_line1">&nbsp;</div>
+		
+		<h3 id="button_line"><input type="reset" class='formbtn' />
+        <input type="submit" value="Submit" name="submit1" id="confirm" class='formbtn' /></h3>
+        
+	</form>
+	</div>
+	</div>
+	
+	<img id="brand" src="images/brands.gif" />
+	<div id="footer"> 
+		<h4 id="footer_title">&copy; 2015 Camera Store, Inc. All rights reserved.</h4>
+	</div>
+	</div>	
+	
+</body>
+
+</html>

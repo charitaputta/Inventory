@@ -1,0 +1,668 @@
+/*
+Vennamaneni, Bhavana Account:jadrn042 
+CS0645 Spring 2015
+Project #3
+*/
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-family: TimesNewRoman, "Times New Roman", Georgia, serif;
+	font-size: 17px;
+	line-height: 1.5em; 
+	color: maroon;
+	text-align: justify;
+}
+
+#wrapper {
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	/*min-width: 1050px; */
+}
+
+#banner {
+	width: 100%;
+	height: 65px;
+	background-image: url(images/bg-header.png);
+	margin-bottom: 10px;
+}
+
+#bannerTitle {
+	color: #E6E6E6;
+	text-align: left;
+	padding-top: 20px;
+	font-size: 1.6em;
+}
+
+#content {
+	min-height: 58%;
+	width: 1050px;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+
+#content2 {
+	min-height: 65%;
+	width: 850px;
+	margin: 0 auto;
+	padding: 15px 0;
+	color: black;
+}
+
+#footer {
+	position: absolute;
+	background-image: url(images/bg-header.png);
+	min-height: 50px;
+	min-width: 1050px;
+	width: 100%;
+	height: 8%;
+	margin-top: 10px;
+}
+
+#footer_title {
+	color: 	#E6E6E6;
+	padding: 10px;
+	text-align: center;
+}
+
+#logo {
+	padding: 0 10px 0 15px;
+	float: left;
+	height: 100px;
+	width: 100px;
+	display: inline;
+}
+
+#navigation, #products_holder {
+	min-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#navigation ul {
+	padding: 6px 0 8px 0;
+	background-color: #EAEDF3;
+    text-align: left;
+    font-size: 17px;
+    box-shadow: 0 10px 10px -7px rgba(0,0,0,0.25);
+}
+
+#navigation ul #current {
+	background-image: url(images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	border-bottom: 4px solid maroon;
+}
+
+#navigation ul #current a{
+	color: maroon;
+}
+
+#navigation li {
+	border-right: 2px groove #ed4e24;
+    display: inline; 
+    padding: 3px 45px;
+    float: left;
+}
+
+#navigation li a {
+	text-decoration: none;
+    color: black; 
+}
+
+#navigation li a:hover {
+	color: maroon;
+}
+
+#left-menu {
+	height: 100%;
+	width : 23%;
+	float: left;
+	min-height: 600px;
+}
+
+#right-products {
+	display: block;
+	width: 77%;
+	background-color: grey;
+	min-height: 600px;
+}
+
+/* Main Page */
+    
+input:focus { 
+	border: 2px solid blue;
+}
+
+input {
+    border: 1px solid black;
+	padding: 5px; 
+    border-radius: 3px;
+} 
+
+input[type=submit], input[type=reset], input[type=button] {
+	background: none repeat scroll 0 0 #ed4e24;
+    border-radius: 2px;
+    border: none !important;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 15px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    letter-spacing: normal;
+    margin: 0;
+    font-family: TimesNewRoman, "Times New Roman", Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+}
+
+#searchbutton {
+	font-size: 0.8em;
+	padding: 3px 10px !important;
+
+}
+
+#button_line {
+	padding: 10px 0 20px 0;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+#message_line1 {
+	padding-left: 5px;
+    font-style: italic;
+    color: red;
+    display: inline;
+}
+
+.message_line {
+	padding: 5px;
+    font-style: italic;
+    color: red;
+    display: inline;
+}
+
+.error {
+    border:  1px solid red;   
+    background-color: #FEE;  
+}
+
+.confirm_message {
+	padding-left: 5px;
+    font-style: italic;
+    color: blue;
+    display: inline;
+}
+
+.form_table {
+	max-width: 650px;
+}
+
+.image {
+	height:150px;
+	width: 200px;
+	border: 2px groove black;
+}
+
+.busy_wait {
+	height: 20px;
+	width: 25px;
+}
+
+.topbuttons {
+	position: center;
+    font-style: italic;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 0 4px;
+    font-size: 13px;
+    max-width: 65px;
+    max-height: 30px;
+    margin: 10px;
+}
+
+#shopping-cart {
+	display: inline;
+	height: 49px;
+	float: right;
+  	width: 55px;
+  	color: white;
+  	font-weight: bold;
+  	margin: 8px 20px 0 0;
+  	border-radius: 4px;
+  	text-align: center;
+  	background-color: #ED4E24;
+}
+
+#cart {
+	display: block;
+	width: 23px;
+	height: 20px;
+	margin: 0 auto;
+}
+
+#brand {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	padding-top: -5px;
+}
+
+#search {
+	margin: 0 10px 1px 50px;
+}
+
+.shop_link {
+  background: #ED4E24 ;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 12px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+/* Products */
+
+.product_table {
+	margin: 0 auto;
+	max-width: 1050px;
+	border-collapse: separate; 
+	border-spacing: 0.4em;
+}
+
+#p_content {
+	min-height: 750px;
+	/*width: 1050px;*/
+	margin: 0 auto;
+	padding: 15px 0;
+}
+
+.product_table1 {
+	max-width: 800px;
+	border-collapse: separate; 
+	border-spacing: 0.4em;
+	padding-left: 15px;
+	padding-top: -2px;
+}
+
+.detail-table {
+	max-width: 675px;
+	min-width: 675px;
+	border-collapse: seperate; 
+	border-spacing: 0.5em;
+	margin: 0 auto;
+}
+
+.p_record {
+	padding: 5px;
+	width: 225px;
+	height: 225px;
+	border: 2px groove #EAEDF3;
+	box-shadow: 3px 2px 3px rgba(0,0,0,0.25);
+	margin: 10px;
+}
+
+.p_image {
+	height: 135px;
+	width: 165px;
+	display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.p_left, .p_left1, .p_left-blue {
+	display: inline;
+	float: left;
+	color: green;
+}
+
+.p_left1 {
+	color: red;
+}
+
+.p_left-blue {
+	color: blue;
+}
+
+.d_image {
+	height: 265px;
+	width: 330px;
+	border: 2px solid grey;
+}
+
+.d_vendor {
+	display: inline;
+}
+
+.p_right {
+	display: inline;
+	float: right;
+}
+
+.p_title {
+	padding-bottom: 15px;
+}
+
+.image_row {
+	width: 330px;
+	padding-right: 25px;
+}
+
+.available {
+	color: green;
+	display: inline;
+	font-weight: bold;
+}
+
+.unavailable {
+	color: red;
+	display: inline;
+	font-weight: bold;
+}
+
+.coming {
+	color: blue;
+	display: inline;
+	font-weight: bold;
+}
+
+#d_message {
+	color: red;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.addToCart {
+
+
+}
+
+/* Filter Menu */
+
+#filter-menu {
+	width: 100%;
+	border-collapse:separate; 
+	border-spacing: 0.5em;
+}
+
+#filter-menu td.f_title{
+	width: 100%;
+	background-color: #EAEDF3;
+	min-height: 25px;
+	padding: 3px 5px;
+	margin: 10px 0;
+    box-shadow: 0 10px 10px -7px rgba(0,0,0,0.25);
+}
+
+.c_title {
+	padding-left: 10px;
+	color: black;
+	display: inline;
+}
+
+#filter-clear, #filter-apply {
+	position: center;
+    display: inline;
+    margin: 40px 4px;
+    font-size: 1em;
+    height: auto;
+}
+
+input[id=amount] {
+	border:0;
+	padding: 5px 0; 
+	color: red; 
+	font-weight:bold;
+	font-size: 0.8em;
+}
+
+#map {
+	float: right;
+	padding-right: 5px;
+	height: 200px;
+	width: 450px;
+	margin-top: 25px;
+}
+
+.clear {
+    clear: both;
+}
+
+.h_contact {
+	text-align: left;
+}
+
+#content2 .p_text {
+	text-indent: 0;
+}
+
+#content2 p { 
+    text-align:justify;
+    margin: 0 0 10px 0; 
+    padding: 5px; 
+    text-indent:40px;
+}
+
+h2,h3,h4 {
+	color: maroon;
+}
+
+/* Display Cart */
+
+#cart_table {
+	margin: 0 auto;
+	width: 850px;
+	border-collapse: separate;
+	border-spacing: 0.5em;
+	color: black;
+}
+
+#cart_table th {
+	min-width: 100px;
+	color: maroon;
+	padding: 5px;
+	background-color: #EAEDF3;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+}
+
+caption {
+	text-align: left;
+	padding: 5px;
+	padding-left: 8px;
+}
+
+th#c_record {
+	min-width: 200px;
+	padding-right: 50px;
+}
+
+.c_image {
+	width: 150px;
+	height: 130px;
+	border: 1px groove grey;
+}
+
+#cart_table td {
+	min-width: 25%;
+	text-align: left;
+	vertical-align: text-top;
+	padding: 5px;
+	background-color: #FAFAFA;
+}
+
+#placeOrder, #continue, .update , .remove {
+	background: none repeat scroll 0 0 #ed4e24;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 15px !important;
+    text-align: center;
+    height: auto;
+    width: auto;
+    letter-spacing: normal;
+    margin: 0;
+    text-decoration: none;
+    font-style: italic;
+}
+
+
+.update, .remove ,.addToCart{
+	margin: 10px 0 0 0;
+	width: 70px;
+	background: none repeat scroll 0 0 #5887F5 !important;
+	padding: 4px 10px;
+}
+
+td#c_buttons {
+	padding-top: 45px;
+	margin-bottom: 15px; 
+	text-align: center;
+	background-color: white;
+}
+
+/* Order Form */
+
+#orderform td {
+	vertical-align: text-bottom;
+}
+
+#oderform form {
+    width: 800px;
+	margin: 0 auto;
+    font-size: 0.8em !important;
+    }  
+     
+label {
+	font-weight: bold;
+	display: inline-block;
+    padding: 5px; 
+    width: 90px;
+    font-size: 1.05em;
+    }
+	
+.label0 {
+	font-weight:bold;
+    display: inline;
+    padding:5px 5px; 
+    width: 120px;
+    }
+
+.label1 {
+	padding-left: 0;
+	padding-right: 20px;
+	font-size: 16px;
+	font-weight:bold;
+	width: 50px;
+}
+
+#orderform input {
+    border: 1px solid black;
+    margin: 9px 10px 0 10px;
+	padding: 2px 5px !important; 
+    border-radius: 3px;
+    font-size: 15px; 
+} 
+
+#button_line {
+	padding: 5px 0 20px 0;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+#message_line1 {
+	padding-left: 5px;
+	font-weight: bold;
+    font-style: italic;
+    color: red;
+    font-size: 18px;
+}
+
+.error {
+    border:  1px solid red;   
+    background-color: #FEE;  
+}
+
+.dropdown {
+	font-size: 0.7em;
+	min-width: 75px;
+	padding: 2px;
+	margin-left: 10px;
+}
+
+.ui-widget input, .ui-widget select {
+	font-family: TimesNewRoman, "Times New Roman", Georgia, serif !important;
+	line-height: 1.2em !important;
+}
+
+/* Confirmation */
+
+#confirmtable {
+	margin: 0 auto;
+	width: 750px;
+	border-collapse: separate;
+	border-spacing: 0.5em;
+	color: black;
+}
+
+#confirmtable th {
+	min-width: 100px;
+	color: maroon;
+	padding: 5px;
+	background-color: #EAEDF3;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
+}
+
+#confirmtable td {
+	min-width: 25%;
+	text-align: left;
+	vertical-align: text-top;
+	padding: 5px;
+	background-color: #FAFAFA;
+}
+
+
+#orderform .formbtn {
+	background: none repeat scroll 0 0 #ed4e24;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 15px !important;
+    text-align: center;
+    height: auto;
+    width: auto;
+    letter-spacing: normal;
+    margin: 5px;
+    font-style: italic;
+}
+
+#cart-table #placeOrder,#continue {
+	width: auto;
+	height: auto;
+	padding: 5px 15px;
+	font-size: 1.1em !important;
+}
+

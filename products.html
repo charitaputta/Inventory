@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Vennamaneni, Bhavana Account:jadrn042
+     CS0645 Spring 2015
+     Project #3
+-->
+
+<head>
+	<title>Online Camera Store</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+	<link rel="shortcut icon" href="/jadrn042/proj2/images/icon.png" />
+	<link rel="stylesheet" type="text/css" href="proj3.css" />
+	<link rel="stylesheet" type="text/css" href="/jadrn042/proj3/js/jquery-ui-1.11.4.custom/jquery-ui.css" />
+
+	<script type="text/javascript" src="/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/shopping_cart.js"></script>
+    <script type="text/javascript" src="/jadrn042/proj3/js/product.js"></script>
+</head>
+
+<body>
+            	
+	<div id="wrapper">
+	  <div id="banner">	
+	  	<img id="logo"src="images/icon.png" />
+	  	<a href="cart.html"><div id="shopping-cart"><span id="count">0</span>
+	  	<img id="cart" src="images/cart.png"></div></a>
+		
+		<h1 display="inline" id="bannerTitle">Camera Store</h1><br/>	
+	</div>
+	<div id = "navigation">
+     <ul>
+      <li><a href="proj3.html" >Home</a></li>
+      <li id="current" ><a href = "products.html">Products</a></li>
+      <li><a href = "about.html">About Us</a></li>
+      <li><a href = "contact.html">Contact Us</a> </li>
+      <input type="text" name="search" size="20" placeholder="Enter keyword" id="search" />
+      <input type="button" value="Search" id="searchbutton" /> 
+      </ul>
+    </div>
+    <div id="p_content">
+    	<div id="left-menu">
+    	<form action="" id='filter-form'>
+    		<table id="filter-menu">
+    			<tr>
+    				<td class="f_title">Brand</td>
+    			</tr>
+    			<tr>
+    				<td><div id="brands"></div></td>
+    			</tr>
+    			<tr>
+    				<td class="f_title">Category</td>
+    			</tr>
+    			<tr>
+    				<td><div id="categories"></div></td>
+    			</tr>
+    			<tr>
+    				<td class="f_title">Price Range</td>	
+    			</tr>
+    			<tr><td><input type="text" id="amount" readonly>
+    			</td></tr>
+    			<tr>
+    				<td><div id="slider"></div></td>
+    			</tr>
+    			<tr>
+    				<td><center><input type="button" value="Clear" id="filter-clear" />
+    					<input type="button" value="Apply" id="filter-apply" /></center></td>
+    			</tr>
+    		</table>	
+    	</form>
+    	</div>
+    	<div id="right-products">&nbsp;Today we’d like to take a quick tour of one of the lesser known, but highly useful types of services you might want to use: the IntentService.
+IntentService (android.app.IntentService) is a simple type of service that can be used to handle asynchronous work off the main thread by way of Intent requests. Each intent is added to the IntentService’s queue and handled sequentially.
+
+IntentService is one of the simplest ways to offload “chunks” of processing off the UI thread of your application and into a remote work queue. There’s no need to launch an AsyncTask and manage it each and every time you have more processing. Instead, you simply define your own service, package up an intent with the appropriate data you want to send for processing, and start the service. You can send data back to the application by simply broadcasting the result as an Intent object, and using a broadcast receiver to catch the result and use it within the app.
+
+Step 0: Getting Started
+
+We have provided a sample application which illustrates the difference between trying to perform processing on the main UI thread (a no-no for application responsiveness) and offloading that same processing to an IntentService. The code can be downloaded via the code download link at the top of this tutorial.
+
+Step 1: Defining the Processing of Messages
+
+First, it’s important to understand when and why to use services in general. One good reason to use an IntentService is when you have work that needs to occur off the main thread to keep the application responsive and efficient. Another reason is when you may have multiple processing requests, and they need to be queued up and handled on the fly.
+
+So let’s say we have an app that needs to do some "processing." We wanted something simple, so we basically will define processing in this case as taking in a string parameter, doing "stuff" to it, and returning the string result. To keep this tutorial simple, the "stuff" we will do is sleep for 30 seconds, pretending to do something useful. In reality, the "stuff" would likely be image processing, connecting to a network, or some other blocking operation.</div>
+    	<div id="product-view">
+    	</div>    
+    </div>
+	
+	
+	<img id="brand" src="images/brands.gif" />
+	<div id="footer"> 
+		<h4 id="footer_title">&copy; 2015 Camera Store, Inc. All rights reserved.</h4>
+	</div>
+	</div>
+	
+	
+</body>
+
+</html>
